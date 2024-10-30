@@ -4,7 +4,8 @@ import "time"
 
 // Position represents the current state of the chess board
 type Position struct {
-	Board           [64]Piece // 8x8 board representation
+	Wp, Wn, Wb, Wr, Wq, Wk, Bp, Bn, Bb, Br, Bq, Bk uint64
+
 	SideToMove      Color
 	CastlingRights  uint8
 	EnPassantSquare int8
@@ -12,32 +13,12 @@ type Position struct {
 	FullMoveNumber  int
 }
 
-// Piece represents a chess piece
-type Piece uint8
-
 // Color represents the color of a chess piece
 type Color bool
 
 const (
 	White Color = false
 	Black Color = true
-)
-
-// Define piece constants
-const (
-	Empty Piece = iota
-	WhitePawn
-	WhiteKnight
-	WhiteBishop
-	WhiteRook
-	WhiteQueen
-	WhiteKing
-	BlackPawn
-	BlackKnight
-	BlackBishop
-	BlackRook
-	BlackQueen
-	BlackKing
 )
 
 // SearchInfo contains information about the current search
@@ -93,10 +74,14 @@ func NewTimeManager() *TimeManager {
 // Additional methods for Position
 func (p *Position) MakeMove(move string) {
 	// Implement move making logic
+
+	// TODO
 }
 
 func (p *Position) GenerateMoves() []string {
 	// Implement move generation
+
+	// TODO
 	return []string{}
 }
 

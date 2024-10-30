@@ -9,7 +9,20 @@ func (e *ChessEngine) UciNewGame() {
 	// 3. Initialize the board to the starting position
 	// 4. Reset any game-specific parameters (e.g., time controls)
 
-	e.position = Position{}
+	e.position = Position{
+		Wp: 0,
+		Wn: 0,
+		Wb: 0,
+		Wr: 0,
+		Wq: 0,
+		Wk: 0,
+		Bp: 0,
+		Bn: 0,
+		Bb: 0,
+		Br: 0,
+		Bq: 0,
+		Bk: 0,
+	}
 	e.searchInfo = SearchInfo{}
 	e.timeManager = TimeManager{}
 }
